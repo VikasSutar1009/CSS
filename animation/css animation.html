@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .box {
+      width: 60px;
+      height: 60px;
+      background: steelblue;
+      margin: 10px 0;
+    }
+
+    /* @keyframes */
+    @keyframes moveBox {
+      0%   { transform: translateX(0); background-color: steelblue; }
+      50%  { transform: translateX(200px); background-color: tomato; }
+      100% { transform: translateX(0); background-color: gold; }
+    }
+
+    /* animation-name + animation-duration */
+    .duration {
+      animation-name: moveBox;
+      animation-duration: 3s;
+    }
+
+    /* animation-delay */
+    .delay {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-delay: 2s;
+    }
+
+    /* animation-iteration-count */
+    .repeat {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    /* animation-direction */
+    .reverse {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-direction: reverse;
+      animation-iteration-count: infinite;
+    }
+
+    .alternate {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+
+    /* animation-timing-function */
+    .ease {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    /* animation-fill-mode */
+    .forwards {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-fill-mode: forwards; /* stays at last keyframe */
+    }
+
+    .backwards {
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-delay: 2s;
+      animation-fill-mode: backwards; /* applies first keyframe before start */
+    }
+
+    /* shorthand animation */
+    .shorthand {
+      animation: moveBox 3s ease-in-out 1s infinite alternate forwards;
+    }
+  </style>
+</head>
+<body>
+    <h2>CSS Animation Properties Demo</h2>
+  <p>Each box demonstrates a different animation property.</p>
+
+  <div class="container">
+    <div class="label">animation-name + animation-duration</div>
+    <div class="box duration"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-delay (starts after 2s)</div>
+    <div class="box delay"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-iteration-count: infinite</div>
+    <div class="box repeat"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-direction: reverse</div>
+    <div class="box reverse"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-direction: alternate</div>
+    <div class="box alternate"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-timing-function: ease-in-out</div>
+    <div class="box ease"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-fill-mode: forwards</div>
+    <div class="box forwards"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation-fill-mode: backwards (shows first keyframe before start)</div>
+    <div class="box backwards"></div>
+  </div>
+
+  <div class="container">
+    <div class="label">animation (shorthand)</div>
+    <div class="box shorthand"></div>
+  </div>
+</body>
+</html>
