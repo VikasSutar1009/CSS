@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h2{
+            margin-top: 40px;
+            color: #333;
+        }
+
+        .box{
+            width: 120px;
+            height: 120px;
+            background: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            transition: transform 0.5s ease;
+        }
+
+        /*1 translate */
+        .translate:hover{
+            transform: translate(60px, 40px);
+        }
+
+        /*2 rotate */
+        .rotate:hover{
+            transform: rotate(45deg);
+        }
+
+        /*3 scaleX */
+        .scaleX:hover{
+            transform: scaleX(1.5);
+        }
+
+        /*4 caleY */
+        .scaleY:hover{
+            transform: scaleY(1.5);
+        }
+
+        /*5 acale */
+        .scale:hover{
+            transform: scale(1.5, 0.7);
+        }
+
+        /*6 SkewX */
+        .skewX:hover{
+            transform: skewX(30deg);
+        }
+
+        /*7 SkewY */
+       .skewY:hover{
+            transform: skewY(30deg);
+        }
+
+        /*8 skew(X + Y) */
+        .skew:hover{
+            transform: skew(20deg, 20deg);
+        }
+
+        /*9 matrtix */
+        .matrix:hover{
+            transform: matrix(1, 0.3, -0.3, 1, 50, 20);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 2D Transforms Example</h1>
+    <p>Hover over each box to see the transform effect 👇</p>
+    
+    <h2>translate()</h2>
+    <div class="box translate">Translate</div>
+    
+    <h2>rotate()</h2>
+    <div class="box rotate">Rotate</div>
+    
+    <h2>scaleX()</h2>
+    <div class="box scaleX">ScaleX</div>
+    
+    <h2>scaleY()</h2>
+    <div class="box scaleY">ScaleY</div>
+    
+    <h2>scale()</h2>
+    <div class="box scale">Scale</div>
+    
+    <h2>skewX()</h2>
+    <div class="box skewX">SkewX</div>
+    
+    <h2>skewY()</h2>
+    <div class="box skewY">SkewY</div>
+    
+    <h2>skew()</h2>
+    <div class="box skew">Skew</div>
+    
+    <h2>matrix()</h2>
+    <div class="box matrix">Matrix</div>
+
+</body>
+</html>
