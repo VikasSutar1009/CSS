@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2{
+            margin-top: 40px;
+            color: #2c3e50;
+        }
+
+        /* common styles */
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li{
+            position: relative;
+        }
+        a{
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background: #3498db;
+        }
+
+        a:hover{
+            background: #2980b9;
+        }
+
+        /* Dropdown container */
+        .dropdown ul{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 150px;
+            background: #3498db;
+        }
+        .dropdown:hover ul{
+            display: block;
+        }
+        /* sub-dropdown for multi-level */
+        .dropdown ul ul{
+            left: 100%;
+            top: 0;
+        }
+
+        /* Animation dropdown */
+        .animated ul{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 150px;
+            background: #3498db;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+        }
+        .animated:hover ul{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Vertical dropdown(sedebar style) */
+        .vertical{
+            width: 200px;
+
+        }
+        .vertical ul{
+            background-color: #2ecc71;
+        }
+        .vertical ul li a{
+            background: #2ecc71;
+
+        }
+        .vertical ul li:hover{
+            background: #27ae60;
+        }
+        .vertical ul ul{
+            display: none;
+        }
+        .vertical ul li:hover > ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+  <h2>1. Simple Hover Dropdown</h2>
+  <ul class="dropdown">
+    <li>
+      <a href="#">Menu</a>
+      <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>2. Multi-Level Dropdown</h2>
+  <ul class="dropdown">
+    <li>
+      <a href="#">Services</a>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li>
+          <a href="#">Development ▸</a>
+          <ul>
+            <li><a href="#">Frontend</a></li>
+            <li><a href="#">Backend</a></li>
+          </ul>
+        </li>
+        <li><a href="#">SEO</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>3. Animated Dropdown</h2>
+  <ul class="animated">
+    <li>
+      <a href="#">Products</a>
+      <ul>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Mobiles</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>4. Vertical Dropdown (Sidebar Style)</h2>
+  <div class="vertical">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li>
+        <a href="#">Settings</a>
+        <ul>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
