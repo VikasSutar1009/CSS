@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow & Flex Shrink Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f7f9fc;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .item {
+            background-color: #00bcd4;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100px;
+            transition: all 0.3s ease;
+        }
+
+        /* 🌱 flex-grow example */
+        .grow-container {
+            background: #e8f5e9;
+        }
+
+        .grow1 {
+            flex-grow: 1;
+        }
+
+        .grow2 {
+            flex-grow: 2;
+        }
+
+        .grow3 {
+            flex-grow: 1;
+        }
+
+        /* 📏 flex-shrink example */
+        .shrink-container {
+            background: #fff3e0;
+        }
+
+        .shrink1 {
+            flex-shrink: 1;
+            width: 200px;
+        }
+
+        .shrink2 {
+            flex-shrink: 3;
+            width: 200px;
+        }
+
+        .shrink3 {
+            flex-shrink: 0;
+            width: 200px;
+        }
+
+        /* Optional styling for responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .item {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎯 Flexbox: flex-grow & flex-shrink Demo</h1>
+
+    <h2>🌱 flex-grow Example</h2>
+    <p>When there’s extra space, items grow based on their <b>flex-grow</b> value.</p>
+    <div class="container grow-container">
+        <div class="item grow1">Grow 1</div>
+        <div class="item grow2">Grow 2</div>
+        <div class="item grow3">Grow 1</div>
+    </div>
+
+    <h2>📏 flex-shrink Example</h2>
+    <p>Resize the browser smaller to see how items shrink differently.</p>
+    <div class="container shrink-container">
+        <div class="item shrink1">Shrink 1</div>
+        <div class="item shrink2">Shrink 3</div>
+        <div class="item shrink3">Shrink 0</div>
+    </div>
+
+</body>
+
+</html>
